@@ -20,25 +20,6 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // 名前が入力されていない場合のバリデーション
-    if (!formData.name || formData.name.trim() === '') {
-      setSubmitStatus({ type: 'error', message: '名前を入力してください。' });
-      return;
-    }
-
-    // メールアドレスが入力されていない場合のバリデーション
-    if (!formData.email || formData.email.trim() === '') {
-      setSubmitStatus({ type: 'error', message: '死ね' });
-      return;
-    }
-
-    // メッセージが入力されていない場合のバリデーション
-    if (!formData.message || formData.message.trim() === '') {
-      setSubmitStatus({ type: 'error', message: 'メッセージを入力してください。' });
-      return;
-    }
-
     setIsSubmitting(true);
     setSubmitStatus(null);
 
@@ -76,9 +57,9 @@ function App() {
       </header>
       <main className="App-main">
         <div className="contact-card">
-          <form onSubmit={handleSubmit} className="contact-form" noValidate>
+          <form onSubmit={handleSubmit} className="contact-form">
             <div className="form-group">
-              <label htmlFor="name">Name</label>
+              <label htmlFor="name">名前</label>
               <input
                 type="text"
                 id="name"
@@ -90,7 +71,7 @@ function App() {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="email">Email Address</label>
+              <label htmlFor="email">メールアドレス</label>
               <input
                 type="email"
                 id="email"
@@ -102,7 +83,7 @@ function App() {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="message">Message</label>
+              <label htmlFor="message">メッセージ</label>
               <textarea
                 id="message"
                 name="message"
