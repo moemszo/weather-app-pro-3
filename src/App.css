@@ -24,7 +24,17 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background: #3b82f6;
+  background: 
+    radial-gradient(circle at 8px 8px, #ff00ff 1px, transparent 0),
+    radial-gradient(circle at 24px 24px, #00ffff 1px, transparent 0),
+    radial-gradient(circle at 8px 24px, #ffff00 1px, transparent 0),
+    radial-gradient(circle at 24px 8px, #00ff00 1px, transparent 0),
+    #000080;
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px, 0 16px, 16px 0;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
 }
 
 .contact-card {
