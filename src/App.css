@@ -47,6 +47,14 @@
   animation: fadeIn 0.3s ease-in;
 }
 
+.greeting {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+  font-weight: 600;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -62,6 +70,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  margin-top: 1rem;
 }
 
 .form-group {

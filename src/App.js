@@ -76,6 +76,7 @@ function App() {
       </header>
       <main className="App-main">
         <div className="contact-card">
+          <h2 className="greeting">こんにちは</h2>
           <form onSubmit={handleSubmit} className="contact-form" noValidate>
             <div className="form-group">
               <label htmlFor="name">Name</label>
